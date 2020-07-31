@@ -41,7 +41,7 @@ object VerilatorCppHarnessGenerator {
     val dutName = dut.name
     val dutApiClassName = dutName + "_api_t"
     val dutVerilatorClassName = "V" + dutName
-    val verilatorVersion = "verilator --verion".!!
+    val verilatorVersion = "verilator --version".!!
     val flushCb = if(verilatorVersion.contains("v4.038")) {
       "Verilated::runFlushCallbacks()"
     } else "Verilated::flushCall()"
